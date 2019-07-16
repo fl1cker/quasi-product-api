@@ -1,0 +1,19 @@
+{
+  "name": "quasi-product-api",
+  "version": "1.0.0",
+  "description": "quasi-product-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fl1cker/quasi-product-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fl1cker/quasi-product-api/issues"
+  },
+  "homepage": "https://github.com/fl1cker/quasi-product-api#readme"
+}
