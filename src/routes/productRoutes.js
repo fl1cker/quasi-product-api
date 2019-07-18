@@ -69,7 +69,8 @@ const products = [
 
 productRouter.route('/')
     .get((req, res) => {
-        res.send(JSON.stringify(products));
+        res.setHeader('Content-Type','application/json');
+        res.json(products)
     })
 
 module.exports = productRouter;
