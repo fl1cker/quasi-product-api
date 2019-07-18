@@ -6,14 +6,12 @@ const debug = require('debug')('app');
 const app = express();
 const port = 3001;
 const productRouter = require('./src/routes/productRoutes.js');
+const shoppingCartRouter = require('./src/routes/shoppingCartRoutes.js');
 
 app.use(cors());
 app.use(morgan('tiny'));
 app.use('/products', productRouter);
-
-app.get('/', (req, res) => {
-    res.send('Hello World From App');
-})
+app.use('/cart', shoppingCartRouter);
 
 app.listen(port);
 debug(`listening on port ${port}`);
