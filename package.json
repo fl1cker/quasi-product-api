@@ -4,7 +4,7 @@
   "description": "quasi-product-api",
   "main": "index.js",
   "scripts": {
-    "start": "set DEBUG=app & node index.js",
+    "start": "set DEBUG=app.*,app & node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "debug": "^4.1.1",
     "express": "^4.17.1",
+    "mongodb": "^3.3.0-beta2",
     "morgan": "^1.9.1"
   }
 }

@@ -1,7 +1,7 @@
 const express = require('express');
 const shoppingCartRouter = express.Router();
 
-const shoppingCart = [{
+const tbdServerSideShoppingCart = [{
     id: 0,
     imageUrl: 'images/products/just-shapes-and-beats.jfif',
     cost: 8.00,
@@ -32,7 +32,7 @@ const shoppingCart = [{
 shoppingCartRouter.route('/')
     .get((req, res) => {
         res.setHeader('Content-Type', 'application/json');
-        res.json(shoppingCart);
+        res.json(tbdServerSideShoppingCart);
     })
     // .post((req, res) => {
     //     shoppingCart = addOrUpdateCart(shoppingCart, {req.id, req.quantity})
@@ -56,15 +56,15 @@ shoppingCartRouter.route('/')
     //     }
     // });
 
-function addOrUpdateCart(shoppingList, product) {
-    const newShoppingList = Object.assign([], shoppingList);
-    const index = newShoppingList.map(x => x.id).indexOf(product.id);
-    if (index >= 0) {
-        newShoppingList[index].quantity += product.quantity;
-    } else {
-        newShoppingList.push({ ...product, quantity: 1 });
-    }
-    return newShoppingList;
-}
+// function addOrUpdateCart(shoppingList, product) {
+//     const newShoppingList = Object.assign([], shoppingList);
+//     const index = newShoppingList.map(x => x.id).indexOf(product.id);
+//     if (index >= 0) {
+//         newShoppingList[index].quantity += product.quantity;
+//     } else {
+//         newShoppingList.push({ ...product, quantity: 1 });
+//     }
+//     return newShoppingList;
+// }
 
 module.exports = shoppingCartRouter;
