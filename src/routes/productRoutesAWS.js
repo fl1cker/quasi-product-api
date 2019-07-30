@@ -4,7 +4,7 @@ const productRouterAWS = express.Router();
 var path = require('path');
 const AWS = require('aws-sdk');
 
-const pathToJson = path.resolve(__dirname, '../../config.json');
+const pathToJson = path.resolve(__dirname, '../../aws.config.json');
 AWS.config.loadFromPath(pathToJson);
 
 productRouterAWS.route('/')

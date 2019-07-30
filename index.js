@@ -6,7 +6,8 @@ const debug = require('debug')('app');
 const app = express();
 const port = 3001;
 
-const productRouter = require('./src/routes/productRoutesAWS.js');
+// const productRouter = require('./src/routes/productRoutesAWS.js');
+const productRouter = require('./src/routes/productRoutesMongo.js');
 const shoppingCartRouter = require('./src/routes/shoppingCartRoutes.js');
 
 app.use(cors());
